@@ -618,6 +618,8 @@ function errorHandler(e, command) {
         ` If your space was not created under ${EU_CODE} region, you must provide the region (${allRegionsButDefault}) upon login.`
     );
   } else {
+    console.log(e)
+    console.log(JSON.stringify(e, null, 2));
     console.log(chalk.red("X") + " An error occurred when executing the " + command + " task: " + e || e.message);
   }
   process.exit(1);
